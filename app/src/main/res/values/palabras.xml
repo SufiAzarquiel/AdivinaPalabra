@@ -1,0 +1,33 @@
+<resources>
+    <string-array name="palabras">
+        <item>perro</item>
+        <item>arbol</item>
+        <item>linea</item>
+        <item>juego</item>
+        <item>barco</item>
+        <item>mosca</item>
+        <item>ninfa</item>
+        <item>golpe</item>
+        <item>talco</item>
+        <item>lucha</item>
+        <item>letra</item>
+        <item>lente</item>
+        <item>susto</item>
+        <item>mundo</item>
+        <item>cable</item>
+        <item>gente</item>
+        <item>hojas</item>
+        <item>tigre</item>
+        <item>manos</item>
+        <item>nubes</item>
+        <item>fuego</item>
+        <item>libro</item>
+        <item>papel</item>
+        <item>botas</item>
+        <item>luzon</item>
+        <item>giras</item>
+        <item>trama</item>
+        <item>micro</item>
+        <item>flora</item>
+    </string-array>
+</resources>
