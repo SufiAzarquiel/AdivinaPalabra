@@ -1,6 +1,5 @@
 package net.azarquiel.adivinapalabra
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
@@ -8,11 +7,13 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import java.util.Locale
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity(), OnClickListener  {
+    private lateinit var palabras: Array<String>
     private var terminando: Boolean = false
     private lateinit var tvIntentos: TextView
     private var intentos: Int = 0
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity(), OnClickListener  {
             images.add(llhLetras.getChildAt(i) as ImageView)
         }
         random = Random(System.currentTimeMillis())
+        palabras = resources.getStringArray(R.array.palabras)
         dibujaPalabra()
         addListeners()
     }
@@ -78,13 +80,12 @@ class MainActivity : AppCompatActivity(), OnClickListener  {
         letrasPalabra = ArrayList(palabra.length)
         letrasDesordenadas = ArrayList(palabra.length)
         for (i in palabra.indices) {
-            letrasPalabra.add(palabra[i].toString())
+            letrasPalabra.add(palabra[i].toString().lowercase(Locale.getDefault()))
         }
         letrasDesordenadas = letrasPalabra.shuffled(random) as ArrayList<String>
     }
 
     private fun getPalabrAleatoria(): String {
-        val palabras = resources.getStringArray(R.array.palabras)
         val num = (palabras.indices).random(random)
         return palabras[num]
     }
@@ -94,7 +95,7 @@ class MainActivity : AppCompatActivity(), OnClickListener  {
             return
         }
         val btn = v as Button
-        indiceBoton = (btn.tag.toString().toInt()) - 1
+        indiceBoton = (btn.tag.toString().toInt())
         imagen = images[indiceBoton]
         intento()
 
@@ -106,7 +107,6 @@ class MainActivity : AppCompatActivity(), OnClickListener  {
         }
 
         if (compruebaPalabra()) {
-            tostada("Has acertado la palabra")
             terminando = true
             muestraDialogo()
         }
@@ -124,7 +124,6 @@ class MainActivity : AppCompatActivity(), OnClickListener  {
                 finish()
             }
             .show()
-
     }
 
     private fun newGame() {
@@ -138,15 +137,11 @@ class MainActivity : AppCompatActivity(), OnClickListener  {
     private fun compruebaPalabra(): Boolean {
         for (i in indices.indices) {
             // si hay alguna letra que no esté en su sitio, devolvemos false
-            if (indices[i] != i) {
+            if (letrasPalabra[i] != letrasPalabra[indices[i]]) {
                 return false
             }
         }
         return true
-    }
-
-    private fun tostada(s: String) {
-        Toast.makeText(this, s, Toast.LENGTH_LONG).show()
     }
 
     private fun intento() {

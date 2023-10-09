@@ -18,59 +18,66 @@
         <LinearLayout
             android:id="@+id/llhUp"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="1"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowup"
+                android:tag="0" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="2"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowup"
+                android:tag="1" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="3"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowup"
+                android:tag="2" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="4"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowup"
+                android:tag="3" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="5"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowup"
+                android:tag="4" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/llhLetras"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -113,53 +120,59 @@
         <LinearLayout
             android:id="@+id/llhDown"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
             android:orientation="horizontal">
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="1"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowdown"
+                android:tag="0" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="2"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowdown"
+                android:tag="1" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="3"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowdown"
+                android:tag="2" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="4"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowdown"
+                android:tag="3" />
 
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="2dp"
                 android:layout_marginRight="2dp"
                 android:layout_weight="1"
-                android:tag="5"
-                android:text="Button" />
+                android:backgroundTint="#00000000"
+                android:foreground="@drawable/arrowdown"
+                android:tag="4" />
         </LinearLayout>
 
     </LinearLayout>
